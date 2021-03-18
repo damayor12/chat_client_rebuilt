@@ -1,4 +1,4 @@
-# Chat Client
+# Chat client
 
 In a few weeks you’re going to be senior students… so it’s time to exit the walled garden of prepared exercises. For this project you have an empty repo and need to build everything yourself.
 
@@ -14,7 +14,7 @@ Make a chat client that loads in the browser, and looks like a typical message a
 
 To make the requests to the API install and use [jQuery](http://jquery.com/download/) (you can save it as a dependency through [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally), or import it from the CDN).
 
-First get your external quotes using [Ajax](http://api.jquery.com/jquery.ajax/) (notice that the responses include a [CORS](https://developer.mozilla.org/en/docs/Web/HTTP/Access_control_CORS) header). Now switch to JSONP, and check the difference between the two methods.
+Get your external quotes using [Ajax](http://api.jquery.com/jquery.ajax/) (notice that the responses include a [CORS](https://developer.mozilla.org/en/docs/Web/HTTP/Access_control_CORS) header).
 
 Make sure to make small, incremental, and descriptive commits along the way. Before committing check your syntax through `gulp lint`.
 
@@ -32,6 +32,6 @@ Now you can run the `gulp` command from the project folder: this will open the
 
 ## Extra credits
 
-- Add unit tests in the `/test` folder. First you’ll need to install [Jasmine](https://jasmine.github.io/) and save it as a [dev-dependency](https://docs.npmjs.com/cli/install) in your project (read the docs and see how it works). In the same way, to test your DOM you can use [jsdom](https://github.com/tmpvar/jsdom).
+- Add unit tests in the `/test` folder. First you’ll need to install [Jest](https://jestjs.io/) and save it as a [dev-dependency](https://docs.npmjs.com/cli/install) in your project (read the docs and see how it works). You can add end-to-end tests as well, using [Cypress](https://www.cypress.io/).
 - Display the timestamp of each message in a user-friendly way, using the “relative time” feature of [Moment.js](https://momentjs.com/).
 - Improve the look and feel of your UI, go fancy, make it sexy!
