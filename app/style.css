@@ -17,7 +17,7 @@ body {
 }
 
 .container {
-  max-width: 400px;
+  width: 400px;
 }
 
 .chat {
@@ -38,6 +38,8 @@ body {
 .chat_messages_box {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  overflow-y: auto;
 }
 
 .chat_message {
@@ -45,17 +47,23 @@ body {
   color: #000;
   padding: 15px;
   border-radius: 15px;
-  width: 80%;
+  max-width: 80%;
+  word-wrap: break-word;
   margin-bottom: 20px;
 }
 
 .chat_message.right { 
   background-color: #adc178;
   align-self: flex-end;
+  text-align: right;
 }
 
 .chat_message.left { 
   background-color: #bde0fe;
+}
+
+.chat_message.right > .chat_message_bottom {
+  justify-content: flex-end;
 }
 
 .chat_message_bottom {
@@ -63,7 +71,7 @@ body {
 }
 
 .chat_message_author {
-  margin-right: 10px;
+  margin-right: 5px;
 }
 
 .chat_input {
