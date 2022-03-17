@@ -35,5 +35,8 @@
   "scripts": {
     "precommit": "gulp lint",
     "test": "echo \"No test specified\""
+  },
+  "dependencies": {
+    "jquery": "^3.6.0"
   }
 }
