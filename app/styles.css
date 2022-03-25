@@ -13,16 +13,21 @@
 body {
   font-size: 16px;
   font-family: 'Open Sans';
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .chat {
-  box-shadow: -1px 1px 65px 10px rgba(0,0,0,0.16);
+  width: 100%;
+  /* height: 100%; */
 }
 
-
-.container,
-.row {
-  height: 100%;
+.chat-wrapper {
+  box-shadow: -1px 1px 65px 10px rgba(0, 0, 0, 0.16);
+  width: 100%;
 }
 
 .chat-left {
@@ -148,8 +153,6 @@ body {
   background-color: white;
 }
 
-
-
 .chat-header {
   display: flex;
   flex-direction: row;
@@ -188,15 +191,11 @@ body {
 }
 
 .chat-messages-box {
-  height: 80vh;
   overflow-y: auto;
   padding-bottom: 30px;
   display: flex;
   flex-direction: column;
-}
-
-.chat-message-top {
-
+  height: 700px;
 }
 
 .chat-message {
@@ -214,7 +213,6 @@ body {
   align-self: flex-end;
   background-color: var(--logoRed);
   color: #fff;
-
 }
 
 .chat-message-bottom {
@@ -223,11 +221,11 @@ body {
 
 .chat-message-author {
   margin-right: 15px;
-  font-size: .8em;
+  font-size: 0.8em;
 }
 
 .chat-message-time {
-  font-size: .8em;
+  font-size: 0.8em;
 }
 
 .chat-input {
@@ -238,6 +236,7 @@ body {
 
 .chat-icons {
   display: flex;
+  align-items: center;
 }
 
 .chat-icons img {
@@ -260,7 +259,7 @@ body {
 .input-txt {
   border-radius: 40px;
   border: 1px solid var(--leftSearchClr);
-  padding: 10px 20px 10px 50px;
+  padding: 10px 20px 10px 20px;
   width: 100%;
   position: relative;
   margin: 0 30px;
@@ -277,5 +276,63 @@ body {
   width: 25px;
 }
 
+@media (max-height: 950px) {
+  .chat {
+    height: 100%;
+  }
+}
 
-@media screen and (min-width: 
+@media (max-width: 1400px) {
+  .chat-user-right {
+    display: none;
+  }
+}
+
+@media (max-width: 1200px) {
+  .chat-user-mid-title span {
+    display: none;
+  }
+}
+
+@media (max-width: 991px) {
+  .chat-messages-box {
+    height: 600px;
+  }
+  .chat-message {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 767px) {
+  .chat-messages-box {
+    width: 100%;
+    height: 500px;
+    padding-bottom: 20px;
+  }
+  
+  .chat-header {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 577px) {
+  .chat-right {
+    width: 100%;
+  }
+
+  .chat-header {
+    margin-bottom: 20px;
+  }
+
+  .chat-messages-box {
+    width: 100%;
+    height: 400px;
+    padding-bottom: 20px;
+  }
+
+  .chat-title,
+  .chat-logo {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+}

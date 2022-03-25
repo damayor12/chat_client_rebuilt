@@ -49,7 +49,7 @@ function generateRandomMsg() {
 // }
 
 let i = 0;
-while (i < 1) {
+while (i < 2) {
   var randNo = Math.floor(Math.random() * (25000 - 5000 + 1) + 5000);
   setInterval(generateRandomMsg, randNo);
   i++;
