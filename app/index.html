@@ -5,29 +5,125 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chat App</title>
-    <link rel="stylesheet" href="./style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./styles.css" />
   </head>
 
   <body>
-    <video id="homeVid" src="./bird.mp4" autoplay loop muted>
-      Enable JS
-    </video>
-    <h1>Stefan and Silky's<br> Chat Client</h1>
     <div class="container">
-      <div class="chat">
-        <div class="chat_messages_box"></div>
-        <div class="chat_input">
-          <input id="input_txt" type="text" placeholder="Your message here" />
-          <button id="send_btn" class="send_btn">Send</button>
+    <section class="chat">
+        <div class="row">
+          <div class="chat-left col-lg-4">
+            <div class="chat-top">
+              <div class="chat-logo">
+                <img src="./assets/logo.svg" alt="Logoipsum" />
+              </div>
+              <div class="chat-title">Messages</div>
+              <div class="chat-search">
+                <span class="chat-search-icon">
+                  <input type="text" placeholder="Search people or messages" />
+                </span>
+              </div>
+              <div class="chat-user">
+                <div class="chat-user-left">
+                  <img src="https://www.placecage.com/200/203" alt="Harald" />
+                </div>
+                <div class="chat-user-mid">
+                  <p class="chat-user-mid-title">
+                    Harald Colin<span>@Haraldcolin</span>
+                  </p>
+                  <p class="chat-user-mid-text">
+                    Please buy some potatoes at the store...
+                  </p>
+                </div>
+                <div class="chat-user-right">March 25</div>
+              </div>
+              <div class="chat-user">
+                <div class="chat-user-left">
+                  <img src="https://www.placecage.com/200/201" alt="Peter" />
+                </div>
+                <div class="chat-user-mid">
+                  <p class="chat-user-mid-title">
+                    Peter Parker<span>@spiderman</span>
+                  </p>
+                  <p class="chat-user-mid-text">Where is my suit?</p>
+                </div>
+                <div class="chat-user-right">March 25</div>
+              </div>
+              <div class="chat-user">
+                <div class="chat-user-left">
+                  <img src="https://www.placecage.com/202/202" alt="Clark" />
+                </div>
+                <div class="chat-user-mid">
+                  <p class="chat-user-mid-title">
+                    Clark Kent<span>@clarkkent</span>
+                  </p>
+                  <p class="chat-user-mid-text">
+                    Have you tried to turn it on and off again?
+                  </p>
+                </div>
+                <div class="chat-user-right">March 24</div>
+              </div>
+            </div>
+            <div class="chat-bottom">
+              <div class="chat-bottom-profile">
+                <div class="chat-bottom-profile-left">
+                  <img src="https://www.placecage.com/205/205" alt="Profile" />
+                </div>
+                <div class="chat-bottom-profile-right">
+                  <p class="chat-bottom-profile-right-name">Busayo Obembe</p>
+                  <p class="chat-bottom-profile-right-handle">@codeworks</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="chat-right col-8">
+            <div class="chat-header">
+              <div class="chat-header-left">
+                <img src="https://www.placecage.com/210/210" alt="" />
+              </div>
+              <div class="chat-header-right">
+                <h2>Harald Colin</h2>
+                <p>@haraldcolin</p>
+              </div>
+            </div>
+            <div class="chat-messages-box"></div>
+            <div class="chat-input">
+              <div class="chat-icons">
+                <img src="./assets/image.svg" alt="pic" />
+                <img src="./assets/gif.svg" alt="gif" />
+              </div>
+              <input
+                id="input-txt"
+                class="input-txt"
+                type="text"
+                placeholder="Start a new message"
+              />
+              <button id="send-btn" class="send-btn">
+                <img src="./assets/send.svg" alt="send-icon" />
+              </button>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
     </div>
     <script src="./scripts.js"></script>
   </body>

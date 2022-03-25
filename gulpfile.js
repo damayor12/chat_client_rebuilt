@@ -25,7 +25,7 @@ gulp.task('default', function () {
     }
   });
   gulp
-    .watch(['app/index.html', 'app/style.css', 'app/script.js'])
+    .watch(['app/index.html', 'app/styles.css', 'app/script.js'])
     .on('change', browserSync.reload);
 });
 
